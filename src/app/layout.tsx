@@ -17,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} bg-gray-950`}>{children}</body>
+      <body
+        className={`${nunito.className} bg-gradient-to-b from-blue-400 to-white`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

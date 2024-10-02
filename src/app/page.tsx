@@ -9,10 +9,10 @@ export default function Home() {
         className="absolute inset-0"
         quantity={108}
         ease={100}
-        color={"#fff"}
+        color={"#000"}
       />
-      <div className="relative z-10 flex items-center gap-4 tracking-tight pointer-events-none bg-clip-text bg-gradient-to-b from-white to-blue-700/80 text-transparent">
-        <Radio width={80} height={80} className="text-blue-400/80" />
+      <div className="relative z-10 flex items-center gap-4 tracking-tight pointer-events-none ">
+        <Radio width={80} height={80} />
         <span>Hritul.rs</span>
       </div>
     </div>
