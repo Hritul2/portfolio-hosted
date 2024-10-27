@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${jetbrainsMono.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
