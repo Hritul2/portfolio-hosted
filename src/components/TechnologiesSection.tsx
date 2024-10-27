@@ -40,7 +40,7 @@ const TechnologiesSection = () => {
         {technologies.map((tech) => (
           <span
             key={tech}
-            className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm"
+            className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm  items-center justify-center flex"
           >
             {tech}
           </span>
