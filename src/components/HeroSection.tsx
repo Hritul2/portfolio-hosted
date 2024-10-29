@@ -1,30 +1,33 @@
-// components/HeroSection.tsx
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20" id="about">
-      <div className="space-y-4">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-          Full-Stack Developer
-          <span className="text-primary"> & Tech Enthusiast</span>
+    <section className="px-4 pb-8 pt-32 md:px-20" id="about">
+      <div className="space-y-3">
+        <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+          Full-Stack Developer{" "}
+          <span className="text-rose-500 dark:text-rose-600">
+            & Tech Enthusiast
+          </span>
         </h1>
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl">
+        <p className="max-w-2xl text-sm text-muted-foreground md:text-base">
           Building robust web applications with modern technologies. Passionate
           about clean code, intuitive user experiences, and innovative
           solutions.
         </p>
-        <div className="flex gap-4 pt-4">
-          <Link href={"#project"}>
-            <Button>
-              View Projects <ArrowRight className="ml-2 h-4 w-4" />
+        <div className="flex gap-3 pt-3">
+          <Link href="#project">
+            <Button size="sm" className="h-9">
+              View Projects
+              <ArrowRight className="ml-2 h-3.5 w-3.5" />
             </Button>
           </Link>
-          <Link href={"mailto:hritul.srivastava@gmail.com"}>
-            <Button variant="outline">
-              Contact Me <Mail className="ml-2 h-4 w-4" />
+          <Link href="mailto:hritul.srivastava@gmail.com">
+            <Button size="sm" variant="outline" className="h-9">
+              Contact Me
+              <Mail className="ml-2 h-3.5 w-3.5" />
             </Button>
           </Link>
         </div>

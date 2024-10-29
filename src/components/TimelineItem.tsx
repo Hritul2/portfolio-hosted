@@ -19,42 +19,51 @@ const TimelineItem = ({
   link: string;
 }) => (
   <div className="flex items-start">
-    <div className="relative flex flex-col items-center mr-4">
+    <div className="relative mr-3 flex flex-col items-center">
       <div className="relative">
         <div
-          className={`w-5 h-5 rounded-full border-2 ${
-            isActive ? "border-primary" : "border-gray-300"
+          className={`h-4 w-4 rounded-full border-2 ${
+            isActive
+              ? "border-rose-500 dark:border-rose-600"
+              : "border-gray-300 dark:border-gray-600"
           }`}
         />
         <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-            w-2.5 h-2.5 rounded-full ${
-              isActive ? "bg-primary" : "bg-gray-300"
-            }`}
+          className={`absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 transform rounded-full ${
+            isActive
+              ? "bg-rose-500 dark:bg-rose-600"
+              : "bg-gray-300 dark:bg-gray-600"
+          }`}
         />
       </div>
       {!isLast && (
         <div
-          className={`w-0.5 h-24 -my-[1px] ${
-            isActive ? "bg-primary" : "bg-gray-200"
+          className={`-my-[1px] h-20 w-0.5 ${
+            isActive
+              ? "bg-rose-500/50 dark:bg-rose-600/50"
+              : "bg-gray-200 dark:bg-gray-700"
           }`}
         />
       )}
     </div>
-    <div className="pt-1 mb-8">
-      <span className="block text-lg font-medium mb-1">{year}</span>
-      {title && <h3 className="text-xl font-semibold mb-2">{title}</h3>}
+    <div className="mb-6 pt-1">
+      <span className="mb-1 block text-sm font-medium text-muted-foreground">
+        {year}
+      </span>
+      {title && (
+        <h3 className="mb-2 text-base font-semibold md:text-lg">{title}</h3>
+      )}
       {description && (
-        <p className="text-muted-foreground text-sm max-w-xl mb-3">
+        <p className="mb-2 max-w-xl text-sm text-muted-foreground">
           {description}
         </p>
       )}
       {tags && (
-        <div className="flex flex-wrap gap-2 mb-3">
+        <div className="mb-2 flex flex-wrap gap-1.5">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs"
+              className="rounded-full bg-rose-500/10 px-2 py-0.5 text-xs text-rose-500 dark:bg-rose-600/10 dark:text-rose-600"
             >
               {tag}
             </span>
@@ -66,9 +75,9 @@ const TimelineItem = ({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-primary hover:underline"
+          className="inline-flex items-center text-sm text-rose-500 hover:text-rose-600 dark:text-rose-600 dark:hover:text-rose-500"
         >
-          View Project <ExternalLink className="ml-1 h-4 w-4" />
+          View Project <ExternalLink className="ml-1 h-3.5 w-3.5" />
         </a>
       )}
     </div>

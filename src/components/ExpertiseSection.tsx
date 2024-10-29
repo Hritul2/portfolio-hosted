@@ -1,35 +1,49 @@
-// components/ExpertiseSection.tsx
 import { Terminal, Server, Layout } from "lucide-react";
+import { Card, CardContent, CardHeader, CardDescription } from "./ui/card";
+
+const cardContent = [
+  {
+    icon: (
+      <Terminal className="mb-3 h-8 w-8 text-rose-500 dark:text-rose-600" />
+    ),
+    title: "Frontend Development",
+    description:
+      "Crafting responsive and intuitive user interfaces with modern React and related technologies.",
+  },
+  {
+    icon: <Server className="mb-3 h-8 w-8 text-rose-500 dark:text-rose-600" />,
+    title: "Backend Development",
+    description:
+      "Building scalable server-side applications and APIs using Node.js and modern frameworks.",
+  },
+  {
+    icon: <Layout className="mb-3 h-8 w-8 text-rose-500 dark:text-rose-600" />,
+    title: "Full-Stack Solutions",
+    description:
+      "Delivering end-to-end solutions with a focus on performance and maintainability.",
+  },
+];
 
 const ExpertiseSection = () => {
   return (
-    <section
-      className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8"
-      id="expertise"
-    >
-      <div className="p-6 rounded-lg border bg-card">
-        <Terminal className="h-12 w-12 text-primary mb-4" />
-        <h3 className="text-xl font-semibold mb-2">Frontend Development</h3>
-        <p className="text-muted-foreground">
-          Crafting responsive and intuitive user interfaces with modern React
-          and related technologies.
-        </p>
-      </div>
-      <div className="p-6 rounded-lg border bg-card">
-        <Server className="h-12 w-12 text-primary mb-4" />
-        <h3 className="text-xl font-semibold mb-2">Backend Development</h3>
-        <p className="text-muted-foreground">
-          Building scalable server-side applications and APIs using Node.js and
-          modern frameworks.
-        </p>
-      </div>
-      <div className="p-6 rounded-lg border bg-card">
-        <Layout className="h-12 w-12 text-primary mb-4" />
-        <h3 className="text-xl font-semibold mb-2">Full-Stack Solutions</h3>
-        <p className="text-muted-foreground">
-          Delivering end-to-end solutions with a focus on performance and
-          maintainability.
-        </p>
+    <section className="px-4 py-8 md:px-20" id="expertise">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+        {cardContent.map(({ icon, title, description }, index) => (
+          <Card
+            key={index}
+            className="border-rose-500/20 dark:border-rose-600/20"
+          >
+            <CardHeader>
+              {icon}
+              <h3 className="mb-2 text-base font-semibold md:text-lg">
+                {title}
+              </h3>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">{description}</p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );

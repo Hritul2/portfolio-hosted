@@ -33,21 +33,23 @@ const projectsData = [
 
 const ProjectsTimelineSection = () => {
   return (
-    <section className="py-12 bg-card rounded-lg border p-8" id="project">
-      <h2 className="text-2xl font-bold mb-8">Featured Projects</h2>
-      <div className="space-y-0">
-        {projectsData.map((project, index) => (
-          <TimelineItem
-            key={project.year}
-            year={project.year}
-            isLast={index === projectsData.length - 1}
-            isActive={project.isActive}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            link={project.link}
-          />
-        ))}
+    <section className="px-4 py-8 md:px-20" id="project">
+      <div className="rounded-lg border border-rose-500/20 bg-background p-4 shadow backdrop-blur-md dark:border-rose-600/20 md:p-6">
+        <h2 className="mb-6 text-lg font-bold md:text-xl">Featured Projects</h2>
+        <div className="space-y-0">
+          {projectsData.map((project, index) => (
+            <TimelineItem
+              key={project.year}
+              year={project.year}
+              isLast={index === projectsData.length - 1}
+              isActive={project.isActive}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              link={project.link}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ const HomePage = () => {
     setIsLoading(false);
   }, []);
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8 animate-fadeIn">
+    <main className="container mx-auto animate-fadeIn px-4 sm:px-6 lg:px-8">
       <HeroSection />
       <ExpertiseSection />
       <ProjectsTimelineSection />

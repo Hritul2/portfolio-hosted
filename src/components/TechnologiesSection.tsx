@@ -1,4 +1,3 @@
-// components/TechnologiesSection.tsx
 const technologies = [
   "JavaScript",
   "TypeScript",
@@ -34,17 +33,21 @@ const technologies = [
 
 const TechnologiesSection = () => {
   return (
-    <section className="py-12" id="techstack">
-      <h2 className="text-2xl font-bold mb-6">Technologies & Interests</h2>
-      <div className="flex flex-wrap gap-3">
-        {technologies.map((tech) => (
-          <span
-            key={tech}
-            className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm  items-center justify-center flex"
-          >
-            {tech}
-          </span>
-        ))}
+    <section className="px-4 py-8 md:px-20" id="techstack">
+      <div className="rounded-lg border border-rose-500/20 bg-background p-4 shadow backdrop-blur-md dark:border-rose-600/20 md:p-6">
+        <h2 className="mb-4 text-lg font-bold md:text-xl">
+          Technologies & Interests
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="flex items-center justify-center rounded-full bg-rose-500/10 px-3 py-1.5 text-xs text-rose-500 transition-colors duration-200 hover:bg-rose-500/20 dark:bg-rose-600/10 dark:text-rose-600 dark:hover:bg-rose-600/20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

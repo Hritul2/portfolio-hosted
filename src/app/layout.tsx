@@ -3,8 +3,8 @@ import { Nunito } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/Header/header";
 import Footer from "@/components/Footer";
+import Appbar from "@/components/Header/Appbar";
 
 const jetbrainsMono = Nunito({
   subsets: ["latin"],
@@ -30,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          <Appbar />
           {children}
           <Footer />
         </ThemeProvider>
