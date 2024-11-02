@@ -3,31 +3,28 @@ import TimelineItem from "./TimelineItem";
 
 const projectsData = [
   {
-    year: "2024",
+    year: "Jan-2024",
     isActive: true,
-    title: "AI-Powered Portfolio Manager",
+    title: "FoodStall - Food Delivery Website",
     description:
-      "Built a full-stack application for portfolio management using AI to predict market trends and optimize investment strategies.",
-    tags: ["React", "Node.js", "TensorFlow", "MongoDB"],
-    link: "#",
+      "FoodStall is a food ordering platform that utilizes the Swiggy API, a well-known food ordering platform, to provide users with a seamless experience of discovering, ordering, and enjoying delicious meals from various restaurants and eateries. ",
+    tags: [
+      "React",
+      "CSS",
+      "GeoLocation",
+      "@emailjs/browser",
+      "@reduxjs/toolkit",
+    ],
+    link: "https://swiggy.hritul.com",
   },
   {
-    year: "2023",
+    year: "Dec-2023",
     isActive: true,
-    title: "Blockchain Voting System",
+    title: "Paralax Landing Page",
     description:
-      "Developed a decentralized voting system using Ethereum smart contracts and Web3 technologies.",
-    tags: ["Solidity", "Web3.js", "React", "Hardhat"],
-    link: "#",
-  },
-  {
-    year: "2022",
-    isActive: true,
-    title: "Real-time Collaboration Platform",
-    description:
-      "Created a real-time collaboration tool with features like document sharing and video conferencing.",
-    tags: ["WebRTC", "Socket.io", "React", "Express"],
-    link: "#",
+      "Developed a seemless paralax landing page for a startup to showcase their product and services.",
+    tags: ["NextJS", "TailwindCSS", "Framer Motion"],
+    link: "https://lp1.hritul.com",
   },
 ];
 
