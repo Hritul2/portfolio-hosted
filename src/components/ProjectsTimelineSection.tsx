@@ -3,6 +3,15 @@ import TimelineItem from "./TimelineItem";
 
 const projectsData = [
   {
+    year: "Oct-2024",
+    isActive: true,
+    title: "Exchange App - Cryptocurrency Exchange Platform",
+    description:
+      "Exchange App is a cryptocurrency exchange platform that mimics an actual exchange platform. It magnages order book, transactions, bids and asks, in memory and updates it in real-time."
+    tags: ["React", "Redis", "NodeJS", "Express", "TimescaleDB", "Kubernetes", "WebSockets"], 
+    link: "https://exchange.hritul.com",
+  },
+  {
     year: "Jan-2024",
     isActive: true,
     title: "FoodStall - Food Delivery Website",
