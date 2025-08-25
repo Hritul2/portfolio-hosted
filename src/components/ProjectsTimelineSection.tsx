@@ -41,7 +41,7 @@ const projectsData: ProjectData[] = [
       "@emailjs/browser",
       "@reduxjs/toolkit",
     ],
-    link: "https://swiggy.hritul.com",
+    link: "https://food.hritul.com",
   },
   {
     year: "Dec-2023",
